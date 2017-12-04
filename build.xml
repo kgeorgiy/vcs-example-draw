@@ -1,0 +1,10 @@
+<project basedir="." default="compile">
+    <target name="compile">
+        <mkdir dir="_out"/>
+        <javac srcdir="src" destdir="_out"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classpath="_out" classname="info.kgeorgiy.draw.Draw"/>
+    </target>
+</project>
