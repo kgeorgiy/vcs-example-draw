@@ -18,7 +18,7 @@ public class Draw {
         Graphics g = image.getGraphics();
 
         for (int i = 0; i < 10; i++) {
-            new Line(0, h / 10 * i, w, h / 10 * i, Color.YELLOW).draw(g);
+            new Line(w / 10 * i, 0, w / 10 * i, h, Color.YELLOW).draw(g);
         }
 
         Circle circle = new Circle(w / 2, h / 2, (h + w) / 4, Color.YELLOW);
