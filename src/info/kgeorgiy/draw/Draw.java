@@ -21,6 +21,9 @@ public class Draw {
             new Line(0, h / 10 * i, w, h / 10 * i, Color.WHITE).draw(g);
         }
 
+        Circle circle = new Circle(w / 2, h / 2, (h + w) / 4, Color.YELLOW);
+        circle.draw(g);
+
         ImageUtil.writeImage("image.jpg", image);
         ImageUtil.showImage(image);
     }
