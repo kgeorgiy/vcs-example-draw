@@ -17,10 +17,9 @@ public class Draw {
         BufferedImage image = ImageUtil.createImage(w, h);
         Graphics g = image.getGraphics();
 
-        Line line1 = new Line(0, 0, w, h, Color.WHITE);
-        Line line2 = new Line(0, h, w, 0, Color.WHITE);
-        line1.draw(g);
-        line2.draw(g);
+        for (int i = 0; i < 10; i++) {
+            new Line(0, h / 10 * i, w, h / 10 * i, Color.WHITE).draw(g);
+        }
 
         ImageUtil.writeImage("image.jpg", image);
         ImageUtil.showImage(image);
